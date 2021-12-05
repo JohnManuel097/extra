@@ -1,0 +1,200 @@
+:root {
+    --color1: #9b7872;
+    --color2: #2c2a29;
+    --color3: #d2bebf;
+    --color4: #987845;
+    --color5: #e4e4e4;
+  
+    --color-letras: #f5f5f5;
+  }
+  
+  .titulo_inventario{
+      margin: 112px;
+  }
+  .contenedor__productos {
+    max-width: 40rem;
+    margin: 12px;
+    background: var(--color3);
+    background: -webkit-linear-gradient(to right, var(--color4), var(--color1));
+    background: linear-gradient(to right, var(--color4), var(--color1));;
+    height: 550px;
+    border-radius: 12px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    float: right;
+  }
+  
+  @media (max-width: 1081px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  @media (max-width: 821px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  .producto {
+    width: 110%;
+    background: rgba(155, 120, 114, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 83px;
+    height: 500px;
+    border-radius: 12px;
+  }
+  
+  .producto__imagen {
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    margin-left: -30px;
+    margin-top: -100px;
+  }
+  
+  .producto__nombre {
+    font-size: 20px;
+  }
+  .producto__precio {
+    font-size: 18px;
+  }
+  .producto__icono {
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color2);
+  }
+  .producto__nombre,
+  .producto__precio,
+  .producto__icono {
+    color: var(--color-letras);
+    margin: 10px;
+    text-align: center;
+  }
+
+  .btn__produtoc-editar {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: var(--color-letras);
+    z-index: 1;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .btn__produtoc-editar:hover{
+    letter-spacing: 3px;
+    background: radial-gradient(circle, rgba(17,156,68,0.927608543417367) 4%, rgba(49,68,7,0.5046393557422969) 91%);
+}
+
+.container__header__cartDiv {
+  display: flex;
+  float: right;
+  margin-top: -440px;
+  margin-right: -100px;
+  flex-flow: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 50px;
+  padding-right: 5px;
+  z-index: 99999;
+}
+
+.container__header__cartDiv--count {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  cursor: default;
+  background-color: var(--color3);
+}
+
+.container__header__cartDiv--list {
+  display: none;
+  min-width: 100px;
+  right: 0;
+  top: 0px;
+  position: absolute;
+  z-index: 999;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+}
+.container__header__cartDiv--list ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.container__header__cartDiv--list img {
+  max-width: 100px;
+  margin-top: -50px;
+}
+
+.container__header__cartDiv--btnCart {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+  background-image: url("../images/cart.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.container__content__burgers--btnClose {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border: 0;
+  cursor: pointer;
+  font-family: "Alfa Slab One", cursive;
+  color: white;
+  background-color: transparent;
+  font-size: 1.2rem;
+  margin-left: -100px;
+}
+
+.text-home {
+  color: white;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: -100px;
+}
+
+.container__content.container__content__listBurgers {
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
